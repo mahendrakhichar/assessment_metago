@@ -1,0 +1,1088 @@
+# MASTER BUILD PROMPT: METAGO AI MARKETING AUTOMATION & DISTRIBUTION PLATFORM
+
+## 1. YOUR ROLE
+
+Act as a combination of:
+
+- Principal AI Architect
+- Senior Python Backend Engineer
+- Multi-Agent Systems Engineer
+- Marketing Automation Architect
+- Social Media Growth Strategist
+- Data Engineer
+- DevOps Engineer
+- Healthcare Content Governance Specialist
+- Product Designer
+
+You are responsible for designing and building a production-oriented AI marketing automation platform for Metago, an India-focused medical GLP-1 weight-loss program.
+
+Do not merely generate a technical plan, a collection of disconnected agents, or a frontend prototype. Build a working application incrementally, with a functioning backend, database, agent workflows, integrations, dashboard, monitoring and deployment configuration.
+
+Work directly in the available project repository. Inspect existing files before making changes. Preserve useful existing code and conventions.
+
+If no repository exists, initialize a clean project.
+
+## 2. PRODUCT VISION
+
+Build an AI-powered marketing operating system that continuously discovers content opportunities, creates medically responsible content, distributes approved content across social channels, manages communities, measures results and improves its distribution strategy using performance data.
+
+The ultimate business objective is:
+
+MAXIMIZE QUALIFIED ORGANIC REACH, CONTENT DISTRIBUTION, AUDIENCE ENGAGEMENT, BRAND TRUST AND ATTRIBUTABLE BUSINESS RESULTS FOR METAGO.
+
+The system should help a small marketing team operate at the scale of a much larger content operation.
+
+The platform must support:
+
+- Multiple official brand accounts.
+- Multiple social platforms.
+- Multiple content formats and languages.
+- Continuous industry trend monitoring.
+- Automated content ideation and production.
+- Cross-platform content repurposing.
+- Scheduling and publishing.
+- Community management.
+- Performance analytics.
+- Experimentation and optimization.
+- Human approval and medical compliance.
+- Cost, reliability and growth monitoring.
+
+Think of this as a shared marketing intelligence and execution platform, not a chatbot that writes social media captions.
+
+## 3. CORE OPERATING PRINCIPLE
+
+Implement a shared intelligence layer with specialized, stateful agent workflows.
+
+Do not create one independent AI agent for every social media account. Use shared services and reusable agents, with separate platform adapters and account configurations.
+
+The system should follow this loop:
+
+DISCOVER → EVALUATE → PLAN → CREATE → VERIFY → APPROVE → DISTRIBUTE → ENGAGE → MEASURE → LEARN → REPEAT
+
+All important operations must be traceable, retryable, observable and recoverable.
+
+The system should run continuously through scheduled jobs, event-driven workflows and queues. Do not implement infinite LLM loops or uncontrolled polling.
+
+## 4. AGENT 1: TREND INTELLIGENCE AGENT
+
+Build an agent that continuously discovers relevant topics in the GLP-1, obesity, metabolic health, nutrition, fitness, healthcare and weight-management industries.
+
+### Data sources
+
+Use a pluggable source architecture for:
+
+- Google Trends or other permitted search-trend data providers.
+- YouTube search, channel and video metadata through authorized APIs.
+- Instagram and Facebook data available through authorized Meta integrations.
+- X data through authorized API access.
+- Public healthcare and scientific publications.
+- Reputable medical news sources.
+- Competitor websites and publicly accessible content.
+- RSS feeds and relevant industry newsletters.
+- Search suggestions and keyword research providers.
+- First-party Metago content performance data.
+- Manually submitted ideas from the marketing team.
+
+Use official APIs wherever possible. Respect source terms, rate limits, robots policies and access restrictions. Do not assume that all sources expose the same data or that free API access is available.
+
+Do not fabricate metrics or label an unverified trend as real-time data.
+
+### Trend processing
+
+For every discovered topic, store:
+
+- Topic title and normalized topic identifier.
+- Original source and source URL.
+- First discovered time and last observed time.
+- Historical observations when available.
+- Search or engagement metrics when actually provided.
+- Growth rate where sufficient historical data exists.
+- Audience and geographic relevance.
+- Industry and topic category.
+- Related search terms.
+- Competitor coverage.
+- Content saturation estimate.
+- Evidence and source reliability.
+- Medical sensitivity and compliance risk.
+- Estimated content production effort.
+
+Deduplicate similar topics and connect related trends.
+
+### Trend scoring
+
+Create a configurable scoring engine using factors such as:
+
+- Trend momentum.
+- Audience demand.
+- Relevance to Metago.
+- Audience intent.
+- Content competition.
+- Potential search longevity.
+- Platform suitability.
+- Brand differentiation.
+- Medical credibility and risk.
+
+Separate trending topics from evergreen topics and emerging scientific developments.
+
+Never treat a high-risk or medically misleading topic as a high-priority opportunity simply because it is viral.
+
+### Outputs
+
+Generate a ranked trend dashboard with:
+
+- Emerging topics.
+- Rising keywords.
+- Topics competitors are covering.
+- Topics Metago has not covered.
+- Suggested content formats.
+- Recommended platforms.
+- Suggested hooks and angles.
+- Supporting sources.
+- Confidence scores.
+- Expiry or review dates for time-sensitive topics.
+
+Support scheduled discovery, configurable refresh intervals, retries and alerting.
+
+## 5. AGENT 2: CONTENT STRATEGY AND EDITORIAL PLANNING
+
+Build a Content Opportunity Engine that converts trends into an actionable editorial calendar.
+
+Organize content into configurable pillars, for example:
+
+- GLP-1 education.
+- Obesity and metabolic health.
+- Nutrition and sustainable lifestyle habits.
+- Exercise and muscle preservation.
+- Medical supervision and patient education.
+- Myths versus evidence.
+- Frequently asked questions.
+- Healthcare professional perspectives.
+- Brand education.
+- Responsible success stories, when properly authorized.
+- General wellness and evergreen educational content.
+
+These are starting categories, not assumptions about Metago's approved messaging.
+
+For each opportunity, determine:
+
+- Intended audience.
+- Audience problem or question.
+- Funnel stage.
+- Primary objective.
+- Platform and format.
+- Content angle.
+- Evidence requirements.
+- Production requirements.
+- Publication urgency.
+- Potential repurposing opportunities.
+- Call to action.
+- Required review level.
+
+Generate a daily and weekly calendar.
+
+Prevent repetitive content by tracking previous topics, angles, hooks, formats and publication history.
+
+Maintain a balanced mix of timely trends and durable evergreen content.
+
+## 6. AGENT 3: MULTIFORMAT CONTENT CREATION
+
+Create a coordinated content production pipeline with specialized tasks or subagents.
+
+### Supported content formats
+
+YouTube:
+- Long-form video scripts.
+- Shorts scripts.
+- Titles and descriptions.
+- Chapters where applicable.
+- Thumbnail concepts.
+- Opening hooks.
+- Pinned-comment suggestions.
+- Search metadata.
+
+Instagram:
+- Reels scripts.
+- Carousel slide copy.
+- Captions.
+- Story sequences.
+- Cover concepts.
+- Calls to action.
+- Accessibility text where supported.
+
+X:
+- Individual posts.
+- Multi-post threads.
+- Educational summaries.
+- Responses to relevant public discussions where permitted.
+- Commentary based on verified evidence.
+
+Also support reusable source content, such as:
+- Articles.
+- FAQs.
+- Newsletter drafts.
+- Website educational pages.
+- Video transcripts.
+- Infographics and visual briefs.
+
+### One source, multiple platform-native versions
+
+The system must maintain a canonical content asset and generate channel-specific adaptations.
+
+For example, one medically reviewed topic can become:
+
+- A YouTube video.
+- Several Shorts.
+- An Instagram Reel.
+- An Instagram carousel.
+- An X thread.
+- An educational article.
+- Several follow-up posts.
+
+Do not blindly duplicate the same text across platforms. Adapt length, structure, hook, tone, format and audience expectations while preserving the verified factual meaning.
+
+Track the relationship between the original asset and every derivative.
+
+### Content package schema
+
+Each content package should include:
+
+- Content ID and campaign ID.
+- Topic and editorial pillar.
+- Intended audience.
+- Platform-specific variant.
+- Hook and main message.
+- Full script or post copy.
+- Visual or video production brief.
+- Caption and metadata.
+- Source citations.
+- Medical claim references.
+- Brand voice settings.
+- Language.
+- CTA.
+- Hashtag suggestions where useful.
+- Approval status.
+- Planned publication time.
+- Target account.
+- Performance history.
+
+Support configurable brand voice, terminology, forbidden claims and preferred language.
+
+## 7. AGENT 4: HEALTHCARE FACT-CHECKING AND COMPLIANCE
+
+This is a mandatory safety layer, not an optional feature.
+
+Metago operates in a medical weight-loss category involving GLP-1 medicines. Incorrect content can harm patients, undermine trust and create regulatory exposure.
+
+Build a multi-stage verification workflow.
+
+### Verification process
+
+1. Extract factual and medical claims from every content asset.
+2. Identify claims that require medical evidence or expert review.
+3. Retrieve relevant authoritative sources.
+4. Verify that the evidence actually supports the wording.
+5. Check whether the evidence is current and applicable.
+6. Identify misleading simplifications, unsupported causal claims and exaggerated outcomes.
+7. Check for potentially unsafe medication advice.
+8. Evaluate compliance with applicable Indian laws, advertising rules, platform policies and professional guidance.
+9. Generate a review report with claim-level evidence.
+10. Block publication when mandatory checks fail.
+
+Prefer authoritative sources, including relevant Indian regulatory and health authorities, peer-reviewed medical literature and applicable official product information.
+
+Do not present generated citations as verified evidence. Store actual source URLs, publication dates and relevant excerpts.
+
+### Medical safeguards
+
+Flag content that:
+
+- Promises guaranteed weight loss.
+- Presents an individual result as a typical outcome.
+- Encourages prescription medicine use without appropriate medical oversight.
+- Recommends unsupervised dose changes.
+- Makes unsupported claims about GLP-1 medicines.
+- Minimizes material side effects or contraindications.
+- Makes misleading before-and-after comparisons.
+- Uses shame, fear or body-image manipulation.
+- Presents fabricated testimonials or medical credentials.
+- Implies that a general educational post is a personal diagnosis.
+
+Apply stricter rules to prescription medicines, treatment claims, patient testimonials and direct conversion campaigns.
+
+Use human medical review when required. A language model's confidence score must never substitute for clinical validation.
+
+### Publishing gates
+
+Implement explicit states:
+
+DRAFT → FACT_CHECK → MEDICAL_REVIEW → BRAND_REVIEW → APPROVED → SCHEDULED → PUBLISHED
+
+A failed check should lead to a blocked state or a revision request.
+
+Only authorized reviewers can approve restricted content. Changes to medically meaningful copy after approval must invalidate the relevant approval and trigger re-review.
+
+Store reviewer identity, decision, timestamp, comments and content version.
+
+Support emergency content withdrawal and account-level publishing pauses.
+
+## 8. AGENT 5: SOCIAL ACCOUNT AND CHANNEL MANAGEMENT
+
+Build a centralized management system for Metago's authorized social media accounts.
+
+Initial channels:
+- YouTube.
+- Instagram.
+- X.
+
+Design the architecture so other channels can be added later.
+
+### Account management
+
+Support:
+
+- Multiple authorized brand accounts.
+- Account identifiers and platform metadata.
+- OAuth-based account connection.
+- Encrypted token storage.
+- Token expiry and refresh handling when supported.
+- Permissions and account ownership.
+- Publishing capabilities by account.
+- Account health and connection status.
+- Rate limits and API error monitoring.
+- Per-account publishing schedules.
+- Account-specific voice and audience settings.
+
+### Account creation requirements
+
+Provide an account onboarding workflow for authorized, legitimate Metago brand accounts.
+
+The system may prepare account names, descriptions, profile copy, visual briefs and setup checklists. Where a platform permits programmatic creation through an approved method, use that method only after verifying eligibility and permissions.
+
+Do not bypass platform restrictions, create fake personas, evade account limits or generate disposable accounts to manipulate reach.
+
+If a platform does not provide a supported account-creation API, clearly show the required manual setup process.
+
+### Publishing engine
+
+Build channel-specific adapters with common interfaces for:
+
+- Validating content and media.
+- Checking required permissions.
+- Uploading media.
+- Creating drafts where supported.
+- Scheduling where supported.
+- Publishing.
+- Recording platform post IDs and URLs.
+- Retrieving available performance metrics.
+- Handling errors and retries.
+
+Respect platform-specific rules for video processing, media formats, API access and publishing permissions.
+
+Never claim that a post was published unless the platform confirms it.
+
+Prevent duplicate publishing after timeouts by maintaining idempotency records and reconciling ambiguous outcomes before retrying.
+
+If native scheduling is unavailable, use the internal scheduler only when the authorized API permits the action.
+
+## 9. AGENT 6: CONTENT DISTRIBUTION AND REACH OPTIMIZATION
+
+This agent should optimize the distribution of each content asset rather than merely posting at the same time everywhere.
+
+### Distribution strategy
+
+For every approved content package:
+
+1. Identify suitable channels and accounts.
+2. Determine platform-specific adaptations.
+3. Recommend publication windows using actual historical performance when available.
+4. Schedule publication according to configured limits.
+5. Generate derivative content opportunities.
+6. Identify related existing content for reuse.
+7. Track every published derivative.
+8. Monitor early performance when data is available.
+9. Recommend evidence-based follow-up actions.
+
+### Distribution tactics
+
+Support:
+
+- Staggered cross-platform distribution.
+- Topic clusters and campaign-based publishing.
+- Repurposing long-form videos into short-form clips.
+- Linking related educational content where supported.
+- Platform-native captions and metadata.
+- Follow-up posts based on audience questions.
+- Evergreen content resurfacing.
+- Collaboration opportunities.
+- Controlled experiments on hooks, formats and posting windows.
+- Organic distribution reports.
+
+Do not use bots to manufacture views, likes, followers or comments. Do not coordinate fake engagement, keyword spam or deceptive mass posting.
+
+### Reach optimization engine
+
+Use real performance data to evaluate:
+
+- Impressions and reach.
+- Views and watch time.
+- Retention where available.
+- Completion rates where available.
+- Likes and comments.
+- Shares and saves where available.
+- Follower growth.
+- Link clicks.
+- Qualified website visits.
+- Conversions when reliable attribution exists.
+
+Account for differences in metric definitions between platforms.
+
+Compare content against appropriate baselines, including platform, format, publication age and audience size where relevant.
+
+Do not optimize only for views. Track qualified engagement and business outcomes as separate objectives.
+
+Use controlled experiments and historical evidence rather than claiming that a model can reliably predict virality.
+
+## 10. AGENT 7: COMMUNITY MANAGEMENT
+
+Build a community operations system for supported comments, mentions and other permitted interactions.
+
+### Capabilities
+
+- Retrieve available comments and mentions.
+- Classify messages by intent and sentiment.
+- Detect frequently asked questions.
+- Identify misinformation and potentially harmful advice.
+- Detect spam and suspicious activity.
+- Identify product questions and purchase intent.
+- Identify support requests and complaints.
+- Draft context-aware responses.
+- Suggest moderation actions.
+- Escalate sensitive conversations.
+- Identify recurring audience concerns.
+- Feed audience questions into the trend and editorial systems.
+
+### Intent categories
+
+Include:
+
+- General appreciation.
+- Educational questions.
+- GLP-1 medication questions.
+- Treatment eligibility questions.
+- Side-effect reports.
+- Urgent medical concerns.
+- Pricing questions.
+- Program and onboarding questions.
+- Complaints.
+- Misinformation.
+- Spam.
+- Potentially abusive content.
+- Privacy-related requests.
+
+### Response policy
+
+General brand and operational questions may be eligible for automatic replies if they match approved templates and the relevant platform permits automated responses.
+
+Medical questions, personal treatment requests, dosage questions, suspected adverse events, emergencies and sensitive personal disclosures must be escalated according to a medically reviewed policy.
+
+Do not diagnose, prescribe, recommend individualized dosing or collect unnecessary medical information in public comments.
+
+Do not automatically delete criticism simply because it is negative.
+
+Use configurable approval modes:
+- Suggest-only.
+- Human approval required.
+- Limited automatic responses for approved low-risk categories.
+
+Maintain an audit trail for generated and published responses.
+
+## 11. AGENT 8: MARKETING ANALYTICS AND LEARNING
+
+Create a performance intelligence service that connects content production, distribution and business outcomes.
+
+### Data model
+
+Track the complete relationship:
+
+Trend → Content Idea → Campaign → Canonical Asset → Platform Variant → Published Post → Engagement → Website Visit → Conversion
+
+Store time-stamped metric observations rather than overwriting historical values.
+
+Where APIs expose only aggregate statistics, clearly label them as aggregate. Do not invent user-level attribution.
+
+### Analytics dashboard
+
+Show:
+
+- Total published content.
+- Publishing success and failure rates.
+- Views, reach and engagement.
+- Watch time and retention where available.
+- Audience and follower growth.
+- Performance by channel and account.
+- Performance by content pillar.
+- Performance by topic.
+- Performance by format and language.
+- Performance by hook or creative variant.
+- Content production cost.
+- Cost per published asset.
+- Cost per qualified outcome where measurable.
+- Trend-to-publication turnaround time.
+- Medical review turnaround time.
+- Community response time.
+- Conversion attribution and its confidence.
+
+### Learning loop
+
+Use historical results to recommend:
+
+- Which topics to prioritize.
+- Which formats deserve more production.
+- Which audience questions to answer.
+- Which posts deserve repurposing.
+- Which hooks to test.
+- Which publication windows to test.
+- Which content categories are underperforming.
+- Which channels are generating qualified engagement.
+
+Distinguish correlation from causation.
+
+Use minimum sample sizes, uncertainty indicators and controlled experiments when appropriate.
+
+Do not allow the optimization system to bypass compliance rules because a misleading post receives more engagement.
+
+## 12. WEB RESEARCH AND CONTENT SOURCE MANAGEMENT
+
+Build a research service shared by the trend, content and fact-checking agents.
+
+It must:
+
+- Store source metadata and URLs.
+- Deduplicate documents.
+- Track publication and retrieval dates.
+- Extract relevant passages.
+- Rank sources by relevance and reliability.
+- Support evidence retrieval for individual claims.
+- Cache reusable research.
+- Flag stale sources.
+- Preserve source provenance throughout content derivatives.
+
+Use retrieval-augmented generation where useful.
+
+Separate scientific evidence, public sentiment, competitor claims and unverified social media discussions. Popularity is not proof of medical accuracy.
+
+Do not automatically republish copyrighted articles, scripts or videos. Generate original content from appropriately used evidence and source material.
+
+## 13. REQUIRED SYSTEM ARCHITECTURE
+
+Use a modular, production-oriented architecture.
+
+Preferred starting stack:
+
+### Backend
+- Python.
+- FastAPI.
+- Pydantic.
+- SQLAlchemy.
+- Alembic database migrations.
+
+### Agent orchestration
+- LangGraph for stateful workflows, branching, retries and human-in-the-loop approvals.
+- LangChain integrations where useful.
+- Model-provider abstraction supporting suitable OpenAI, Anthropic or other approved models.
+- Structured outputs and schema validation.
+- Explicit tool permissions and agent boundaries.
+
+Do not introduce a multi-agent framework simply for novelty. Use deterministic code for routine operations and LLMs for tasks that benefit from reasoning or language generation.
+
+### Storage and infrastructure
+- PostgreSQL for application state and metadata.
+- pgvector or another justified vector store for semantic retrieval.
+- Redis for caching, rate limiting and task coordination where appropriate.
+- A durable background-job system with retries and dead-letter handling.
+- S3-compatible object storage or Cloudflare R2 for media and assets.
+- Docker for local development and deployment.
+- A cloud deployment configuration appropriate to the expected workload.
+
+### Frontend
+- Next.js.
+- TypeScript.
+- A consistent component system.
+- Responsive layouts.
+- Charts and tables for operational analytics.
+
+### Observability
+- Structured logs.
+- OpenTelemetry instrumentation.
+- Metrics and alerting.
+- Langfuse or a comparable LLM tracing solution where appropriate.
+- Token usage and model-cost tracking.
+- Agent run histories and failure diagnostics.
+
+Keep external integrations behind interfaces so providers can be changed without rewriting business logic.
+
+Use managed services when they materially reduce operational complexity. Do not introduce Kubernetes or a complex microservice architecture before the scale requires it.
+
+## 14. SUGGESTED PROJECT STRUCTURE
+
+Start with a modular monolith and clearly separated background workers. Extract services later only when justified.
+
+Organize the repository approximately as follows:
+
+backend/
+  app/
+    api/
+    core/
+    db/
+    models/
+    schemas/
+    services/
+    agents/
+      trend_intelligence/
+      content_strategy/
+      content_creation/
+      medical_review/
+      distribution/
+      community/
+      analytics/
+    workflows/
+    integrations/
+      trends/
+      search/
+      youtube/
+      instagram/
+      x/
+      storage/
+      analytics/
+    workers/
+    security/
+    observability/
+    tests/
+
+frontend/
+  app/
+  components/
+  features/
+  lib/
+  types/
+
+infra/
+  docker/
+  deployment/
+
+docs/
+  architecture/
+  adr/
+  operations/
+  compliance/
+
+Also create:
+- Environment configuration templates.
+- Dependency lockfiles.
+- Database migrations.
+- Docker Compose for local development.
+- Seed and demo data.
+- API documentation.
+- Unit and integration tests.
+- CI configuration.
+- Deployment instructions.
+
+Adjust the structure if a better, well-justified design fits the actual repository.
+
+## 15. DATABASE DESIGN
+
+Design and implement normalized, maintainable database models for:
+
+- Users.
+- Roles and permissions.
+- Organizations or workspaces.
+- Brand configurations.
+- Connected social accounts.
+- Encrypted integration credentials or credential references.
+- Trend observations.
+- Topics and topic relationships.
+- Research sources.
+- Content pillars.
+- Campaigns.
+- Content ideas.
+- Canonical content assets.
+- Platform-specific variants.
+- Media assets.
+- Claim verification records.
+- Approval decisions.
+- Publication schedules.
+- Published post records.
+- Publishing attempts.
+- Metric observations.
+- Community messages.
+- Response drafts and published responses.
+- Agent runs.
+- Workflow checkpoints.
+- Audit events.
+- Notifications.
+- Experiments.
+- Conversion events where lawfully collected.
+- Usage and cost records.
+
+Use UUIDs or another consistent identifier strategy.
+
+Add suitable indexes, uniqueness constraints, timestamps, status fields and foreign keys.
+
+Implement tenant isolation if multiple brands or workspaces are supported.
+
+Avoid storing unnecessary personal or health information. Apply retention and access policies to community data and other sensitive records.
+
+## 16. DASHBOARD AND USER EXPERIENCE
+
+Build a real operational dashboard, not a static landing page.
+
+Required pages:
+
+### Overview
+- Today's publishing plan.
+- Active campaigns.
+- Emerging trends.
+- Posts published today.
+- Pending approvals.
+- Failed jobs.
+- Community items requiring attention.
+- Key performance metrics.
+- System health.
+
+### Trend Explorer
+- Ranked trends.
+- Search and filters.
+- Source links.
+- Trend history.
+- Trend details.
+- Create-content action.
+
+### Content Studio
+- Content idea inbox.
+- Script and post editor.
+- Platform variants.
+- Evidence and references.
+- Version history.
+- Approval status.
+- Regenerate or revise actions.
+- Media asset management.
+
+### Editorial Calendar
+- Calendar and list views.
+- Drag-and-drop scheduling where practical.
+- Channel filters.
+- Approval status.
+- Publication conflicts.
+- Rescheduling.
+
+### Publishing Center
+- Connected accounts.
+- Scheduled and published posts.
+- Publication status.
+- Failed jobs and retry controls.
+- Platform post links.
+- Account-level pause controls.
+
+### Community Inbox
+- Unified supported comments and mentions.
+- Intent and risk filters.
+- Suggested responses.
+- Assignment and escalation.
+- Approval and audit history.
+
+### Analytics
+- Cross-platform metrics.
+- Content comparisons.
+- Topic and format performance.
+- Campaign reporting.
+- Qualified traffic and conversion reporting.
+- Cost and efficiency metrics.
+
+### Settings
+- Brand voice.
+- Content pillars.
+- Approval policies.
+- Medical review rules.
+- Posting schedules.
+- Account connections.
+- API credentials.
+- User roles.
+- Notification settings.
+- Retention policies.
+- Model selection and budgets.
+
+Make loading, empty, error, disconnected-account and permission-denied states work correctly.
+
+## 17. SECURITY AND RELIABILITY
+
+Implement:
+
+- Role-based access control.
+- Secure authentication and session management.
+- OAuth state validation.
+- Encrypted credentials and secrets management.
+- Least-privilege access.
+- Input validation.
+- Rate limiting.
+- CSRF protections where applicable.
+- Audit logging.
+- Secure file upload validation.
+- File size and media limits.
+- Webhook verification where applicable.
+- Database transaction management.
+- Idempotent background tasks.
+- Exponential backoff with jitter.
+- Dead-letter queues.
+- Timeouts and circuit breakers.
+- Job cancellation and graceful shutdown.
+- Backups and recovery documentation.
+- Data deletion and retention controls.
+- Protection against prompt injection in retrieved content.
+- Strict separation between untrusted content and system instructions.
+- Explicit authorization for every external tool action.
+
+Agents must never be allowed to execute arbitrary shell commands, access unrestricted credentials, or publish to an account outside their assigned permissions.
+
+Use deterministic authorization checks outside the LLM.
+
+## 18. COST AND PERFORMANCE MANAGEMENT
+
+The platform must be cost-conscious.
+
+Implement:
+
+- Model selection by task complexity.
+- Caching for repeated research and classifications.
+- Content deduplication.
+- Batch processing when supported.
+- Concurrency limits.
+- Token and API usage tracking.
+- Per-agent and per-campaign budgets.
+- Per-platform rate-limit handling.
+- Configurable job priorities.
+- Daily and monthly spend limits.
+- Alerts on abnormal spending.
+- Graceful degradation when providers fail.
+
+Use smaller, cheaper models for routine classification and formatting when evaluation demonstrates sufficient quality. Reserve stronger models for tasks that justify their cost.
+
+Never sacrifice mandatory medical verification for cost savings.
+
+Do not call an LLM when deterministic code can reliably perform the task.
+
+## 19. TESTING AND EVALUATION
+
+Implement a comprehensive test suite.
+
+### Unit tests
+- Trend scoring.
+- Topic deduplication.
+- Content schemas.
+- Approval rules.
+- Medical risk classification.
+- Permissions.
+- Scheduling.
+- Metric calculations.
+- Cost calculations.
+- Idempotency.
+
+### Integration tests
+- Database operations.
+- Queue processing.
+- Provider adapters.
+- OAuth flows.
+- Publishing lifecycle.
+- Token expiry.
+- API failure handling.
+- Retry and recovery.
+- Webhook processing.
+
+### Agent evaluations
+- Evidence-grounded content.
+- Hallucination and unsupported-claim detection.
+- Brand voice consistency.
+- Platform adaptation quality.
+- Duplicate-content detection.
+- Community classification.
+- Medical escalation recall.
+- Prompt-injection resistance.
+
+Use synthetic fixtures and mocked platform APIs for automated tests.
+
+Tests must not accidentally publish real posts or send real replies.
+
+Add an end-to-end demo flow that exercises:
+
+1. Ingest a mock trend.
+2. Score and prioritize it.
+3. Create a content idea.
+4. Generate platform variants.
+5. Verify citations and claims.
+6. Request and record human approval.
+7. Schedule a mock publication.
+8. Simulate a successful post.
+9. Ingest mock analytics.
+10. Produce a performance insight.
+
+## 20. DEVELOPMENT PHASES
+
+Build incrementally. Do not attempt to implement the entire system in a single unstructured code-generation pass.
+
+### Phase 0: Repository inspection and architecture
+- Inspect the existing project.
+- Identify existing code and integrations.
+- Produce a concise architecture document.
+- Document assumptions and unknowns.
+- Create an implementation plan.
+- Define interfaces, data models and approval boundaries.
+- Record major architectural decisions.
+
+### Phase 1: Foundation
+- Set up backend and frontend.
+- Configure PostgreSQL and migrations.
+- Implement authentication and roles.
+- Add structured logging and configuration.
+- Create Docker-based local development.
+- Build the initial dashboard shell.
+- Add health checks and tests.
+
+### Phase 2: Content operations core
+- Implement content assets and variants.
+- Build the content studio.
+- Implement editorial calendars.
+- Add review and approval workflows.
+- Add mock integrations and seed data.
+- Demonstrate the complete content lifecycle.
+
+### Phase 3: Trend intelligence
+- Implement source adapters.
+- Build ingestion, deduplication and scoring.
+- Store trend history.
+- Add scheduled jobs and alerts.
+- Connect trends to content opportunities.
+
+### Phase 4: AI content workflows
+- Implement the content strategy and creation workflows.
+- Add evidence retrieval and claim extraction.
+- Add medical review gates.
+- Build prompt versioning and evaluation.
+- Support multiple languages and platform-specific variants.
+
+### Phase 5: Social publishing
+- Implement the authorized YouTube, Instagram and X adapters.
+- Support account connection and permissions.
+- Add publishing, scheduling, reconciliation and retries.
+- Begin with dry-run and sandbox testing wherever available.
+- Enable real publishing only after the user explicitly configures credentials and approves the workflow.
+
+### Phase 6: Community management
+- Add supported comment ingestion.
+- Implement classification, suggested responses and escalation.
+- Add configurable human-approval policies.
+- Implement audit history and moderation controls.
+
+### Phase 7: Analytics and optimization
+- Add metrics ingestion.
+- Build reporting dashboards.
+- Connect content assets to published posts.
+- Implement experimentation and learning recommendations.
+- Add cost and outcome attribution.
+
+### Phase 8: Production hardening
+- Security review.
+- Performance tests.
+- Provider outage simulations.
+- Backup and recovery tests.
+- CI/CD.
+- Deployment and rollback procedures.
+- Monitoring and alerts.
+- Documentation and operational runbooks.
+
+At the end of every phase:
+1. Run the relevant tests.
+2. Fix failures before moving forward.
+3. Summarize files created or changed.
+4. Document completed functionality.
+5. Identify remaining limitations.
+6. Provide exact commands to run and verify the application.
+
+## 21. OPERATING MODES
+
+Support three explicit operating modes.
+
+### Mode A: Demo
+Uses synthetic data and mock social platform integrations. Safe for local development.
+
+### Mode B: Assisted
+Real research and content generation are allowed, but publication and sensitive community responses require approval.
+
+### Mode C: Controlled automation
+Approved workflows can publish and respond automatically within explicit permissions, platform constraints, budget limits and medical policies.
+
+Medical-risk content must never bypass its required review gate in any mode.
+
+Default to Demo mode. Never silently activate real publishing.
+
+## 22. DEFINITION OF DONE
+
+The project is not complete merely because code files exist or the dashboard looks polished.
+
+A feature is complete only when:
+
+- Its database schema and migrations work.
+- Its backend API works.
+- Its UI is connected to real application state.
+- Inputs are validated.
+- Permissions are enforced.
+- Errors are handled.
+- Logs and status information are available.
+- Tests cover its core behavior.
+- Setup and usage are documented.
+
+The first meaningful milestone is a working end-to-end workflow using mock external services. Subsequent milestones should replace mock integrations with authorized real integrations.
+
+Do not fake API results, publish-success states, connected-account indicators or analytics.
+
+## 23. HOW YOU SHOULD WORK
+
+Follow these rules throughout development:
+
+1. Inspect the repository before modifying it.
+2. Identify missing requirements instead of silently inventing business facts.
+3. Make reasonable, documented assumptions where work can proceed safely.
+4. Prefer simple, maintainable engineering over unnecessary abstraction.
+5. Use typed interfaces and structured data contracts.
+6. Keep prompts, models, integrations and business logic independently configurable.
+7. Do not hardcode secrets, account IDs or provider-specific assumptions.
+8. Never overwrite existing useful work without understanding it.
+9. Never leave core functionality as unexplained TODO comments.
+10. Do not report an integration as working unless it has been tested.
+11. Use mock providers when credentials are unavailable, but clearly identify them.
+12. Do not claim access to private platform data that the connected API cannot provide.
+13. Build useful operational controls, not just autonomous agents.
+14. Ask me for credentials only when an integration actually needs them, and never ask me to paste secrets into source code.
+15. Explain significant architecture decisions briefly and practically.
+16. Maintain a list of completed tasks, outstanding tasks and known limitations.
+17. After each implementation step, run tests and fix the issues introduced.
+18. Do not stop after producing a plan: start implementing the first phase in the current repository.
+
+## 24. FIRST ACTION
+
+Begin by inspecting the repository and its runtime environment.
+
+Then provide:
+- A concise summary of the existing codebase.
+- A proposed architecture and important trade-offs.
+- A prioritized implementation plan.
+- The initial database entities and workflow boundaries.
+- External API access requirements and known platform limitations.
+- Critical medical, security and operational safeguards.
+- A list of assumptions requiring Metago's confirmation.
+
+After that, immediately implement Phase 1, test it, and continue into Phase 2 if the foundation passes.
+
+Do not wait for me to approve every minor technical decision. Ask questions only when a missing business decision, permission or credential blocks safe progress.
+
+The goal is a genuinely working, extensible marketing automation platform that can grow from a local prototype into a reliable production system for Metago.
+
+Start now.

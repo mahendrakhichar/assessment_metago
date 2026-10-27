@@ -1,0 +1,49 @@
+# Phase 1 — Core Backend Dependencies
+# Install with: pip install -r requirements.txt
+
+# ── Web Framework ──────────────────────────────
+fastapi==0.115.5
+uvicorn[standard]==0.32.1
+python-multipart==0.0.12
+
+# ── Database ───────────────────────────────────
+sqlalchemy[asyncio]==2.0.36
+aiosqlite==0.22.1
+asyncpg==0.30.0
+psycopg2-binary==2.9.10
+alembic==1.14.0
+
+# ── Data Validation ────────────────────────────
+pydantic==2.10.3
+pydantic-settings==2.6.1
+email-validator==2.2.0
+
+# ── Auth & Security ────────────────────────────
+python-jose[cryptography]==3.3.0
+passlib[bcrypt]==1.7.4
+cryptography==44.0.0
+
+# ── HTTP Client ────────────────────────────────
+httpx==0.28.1
+aiohttp==3.11.10
+
+# ── Background Jobs ────────────────────────────
+arq==0.26.1
+redis==5.2.1
+
+# ── LLM / AI ──────────────────────────────────
+openai==1.57.4
+langchain==0.3.13
+langchain-openai==0.2.14
+langgraph==0.2.59
+langchain-community==0.3.13
+
+# ── Observability ─────────────────────────────
+structlog==24.4.0
+python-json-logger==3.2.1
+
+# ── Utilities ─────────────────────────────────
+python-dotenv==1.0.1
+tenacity==9.0.0
+python-slugify==8.0.4
+pytz==2024.2
