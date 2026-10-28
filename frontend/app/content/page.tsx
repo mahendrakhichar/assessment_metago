@@ -3,7 +3,7 @@
 import React, { useEffect, useState } from 'react';
 import Sidebar from '@/components/Sidebar';
 import { content } from '@/lib/api';
-import type { CanonicalAsset, ContentPillar } from '@/lib/api';
+import type { CanonicalAsset } from '@/lib/api';
 
 const STATUS_ORDER = [
   'draft', 'fact_check', 'medical_review', 'brand_review',
@@ -12,18 +12,14 @@ const STATUS_ORDER = [
 
 export default function ContentStudioPage() {
   const [assets, setAssets] = useState<CanonicalAsset[]>([]);
-  const [pillars, setPillars] = useState<ContentPillar[]>([]);
   const [loading, setLoading] = useState(true);
   const [statusFilter, setStatusFilter] = useState('all');
 
   useEffect(() => {
-    Promise.allSettled([
-      content.assets(),
-      content.pillars(),
-    ]).then(([assetsRes, pillarsRes]) => {
-      if (assetsRes.status === 'fulfilled') setAssets(assetsRes.value);
-      if (pillarsRes.status === 'fulfilled') setPillars(pillarsRes.value);
-    }).finally(() => setLoading(false));
+    content.assets()
+      .then((res) => setAssets(res))
+      .catch(() => {})
+      .finally(() => setLoading(false));
   }, []);
 
   const filtered = statusFilter === 'all'

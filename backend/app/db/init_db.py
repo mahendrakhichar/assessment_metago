@@ -13,7 +13,9 @@ from sqlalchemy.future import select
 
 from app.config import settings
 from app.core.security import hash_password
-from app.db.session import AsyncSessionLocal
+from app.db.base import Base
+from app.db.session import AsyncSessionLocal, engine
+import app.models  # noqa: F401
 from app.models.content import ContentPillar
 from app.models.user import User, UserRole
 from app.observability.logging import configure_logging
@@ -42,6 +44,11 @@ DEMO_SOCIAL_ACCOUNTS = [
 
 async def seed_database():
     configure_logging()
+
+    # Ensure tables exist
+    async with engine.begin() as conn:
+        await conn.run_sync(Base.metadata.create_all)
+
     async with AsyncSessionLocal() as db:
         # ── Admin user ──────────────────────────────────────────────
         existing = await db.execute(

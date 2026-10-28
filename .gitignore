@@ -40,6 +40,7 @@ logs/
 
 # DB
 *.sqlite3
+*.db
 
 # Alembic
 backend/alembic/versions/*.py
@@ -47,3 +48,6 @@ backend/alembic/versions/*.py
 # Media
 uploads/
 media/
+
+# local use
+run.txt
